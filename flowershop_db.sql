@@ -4,6 +4,7 @@ create user hdang with password 'secret';
 create database flowershopdb with template=template0 owner=hdang;
 \connect flowershopdb;
 alter default privileges grant all on tables to hdang;
+alter default privileges grant all on sequences to hdang;
 
 create table users (
     user_id  serial primary key,
